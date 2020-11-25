@@ -23,7 +23,7 @@ Instructions are provided for the https://www.gnu.org/software/bash/[Bash], http
 +
 [source,sh]
 ----
-➜ git clone git@github.com:jwillikers/chunkify.git
+➜ git clone https://github.com/jwillikers/chunkify.git
 ----
 
 . Change into the project's directory.
