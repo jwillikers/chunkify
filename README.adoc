@@ -319,6 +319,31 @@ _ZSH_::
 done! ✨ 🌟 ✨
 ----
 
+. Add completions for Pipenv to your shell.
++
+--
+_fish_::
++
+[source,sh]
+----
+➜ echo "eval (pipenv --completion)" > ~/.config/fish/completions/pipenv.fish
+----
+
+_Bash_::
++
+[source,bash]
+----
+➜ echo 'eval "$(pipenv --completion)"' >> ~/.bashrc
+----
+
+_ZSH_::
++
+[source,zsh]
+----
+➜ echo 'eval "$(pipenv --completion)"' >> ~/.zshrc
+----
+--
+
 . Add the asdf plugin for direnv.
 +
 [source,sh]
@@ -387,31 +412,6 @@ NOTE: The `direnvrc` file should only use Bash syntax.
 ----
 ➜ direnv allow
 ----
-
-. Add completions for Pipenv to your shell.
-+
---
-_fish_::
-+
-[source,sh]
-----
-➜ echo "eval (pipenv --completion)" > ~/.config/fish/completions/pipenv.fish
-----
-
-_Bash_::
-+
-[source,bash]
-----
-➜ echo 'eval "$(pipenv --completion)"' >> ~/.bashrc
-----
-
-_ZSH_::
-+
-[source,zsh]
-----
-➜ echo 'eval "$(pipenv --completion)"' >> ~/.zshrc
-----
---
 
 == Test
 
