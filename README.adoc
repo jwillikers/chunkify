@@ -415,6 +415,15 @@ _ZSH_::
 
 == Test
 
+Static type checking can be performed with http://www.mypy-lang.org/[mypy] to verify that typing is correct.
+Just run the `mypy` program with the the name of the Python script as shown below.
+
+[source,sh]
+----
+➜ mypy chunkify.py
+Success: no issues found in 1 source file
+----
+
 Test cases are available for _chunkify_.
 Execute them with https://docs.pytest.org/en/stable/[pytest].
 
@@ -440,6 +449,7 @@ Several of these projects are enumerated below.
 * https://github.com/asdf-community/asdf-direnv[asdf-direnv]
 * https://direnv.net/[direnv]
 * https://git-scm.com/[Git]
+* http://www.mypy-lang.org/[mypy]
 * https://docs.pytest.org/en/stable/[pytest]
 * https://www.python.org/[Python]
 * https://rouge.jneen.net/[Rouge]
