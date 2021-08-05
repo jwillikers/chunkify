@@ -9,7 +9,6 @@ readme = "README.adoc"
 homepage = "https://github.com/jwillikers/chunkify"
 repository = "https://github.com/jwillikers/chunkify"
 documentation = "https://github.com/jwillikers/chunkify"
-exclude = ["chunkify/test_chunkify.py"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
