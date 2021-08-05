@@ -27,6 +27,6 @@ jobs:
       - name: Lint with Pylint
         run: poetry run pylint -j 0 chunkify tests
       - name: Check static typing with mypy
-        run: poetry run mypy chunkify
+        run: poetry run mypy .
       - name: Test with pytest
         run: poetry run pytest
