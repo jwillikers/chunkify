@@ -18,12 +18,14 @@ jobs:
           python-version: 3.9
       - name: Install Poetry
         uses: abatilo/actions-poetry@v2.0.0
+      - name: Verify the pyproject.toml
+        run: poetry check
       - name: Install Python dependencies
         run: poetry install
       - name: Check formatting with Black
         run: poetry run black --check .
       - name: Lint with Pylint
-        run: poetry run pylint -j 0 chunkify
+        run: poetry run pylint -j 0 chunkify tests
       - name: Check static typing with mypy
         run: poetry run mypy chunkify
       - name: Test with pytest
