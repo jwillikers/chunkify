@@ -49,7 +49,7 @@ DNF::
 +
 [source,sh]
 ----
-sudo dnf -y install black pre-commit pylint python3-mypy python3-pytest
+sudo dnf -y install black pre-commit pylint python3-mypy python3-pytest python3-setuptools_scm+toml
 ----
 
 Virtual Environment::
@@ -113,12 +113,20 @@ mypy *.py
 
 Test cases are available for _chunkify_.
 Execute them with {pytest}.
+From the root directory of the project, run `pytest`.
 
-. From the root directory of the project, run `pytest`.
-+
 [source,sh]
 ----
 pytest
+----
+
+=== Package
+
+Build with Python's *build* module.
+
+[source,sh]
+----
+python -m build
 ----
 
 == Contributing

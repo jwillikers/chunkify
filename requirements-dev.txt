@@ -1,5 +1,7 @@
 black>=20.8b1
+build>=0.6.0
 mypy>=0.910
 pre-commit>=2.13.0
 pylint>=2.9.3
 pytest>=6.2.2
+setuptools_scm>=5.0.1

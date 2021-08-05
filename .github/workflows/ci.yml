@@ -21,8 +21,8 @@ jobs:
       - name: Check formatting with Black
         run: black --check .
       - name: Lint with Pylint
-        run: pylint -j 0 *.py
+        run: pylint -j 0 chunkify
       - name: Check static typing with mypy
-        run: mypy *.py
+        run: mypy chunkify
       - name: Test with pytest
         run: pytest
