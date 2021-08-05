@@ -33,9 +33,3 @@ disable = [
     "missing-function-docstring",
     "missing-module-docstring",
 ]
-
-[[tool.mypy.overrides]]
-module = [
-    "chunkify",
-    "tests"
-]
