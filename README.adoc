@@ -14,6 +14,7 @@ endif::[]
 :Git: https://git-scm.com/[Git]
 :itertools: https://docs.python.org/3/library/itertools.html[itertools]
 :mypy: http://www.mypy-lang.org/[mypy]
+:Poetry: https://python-poetry.org[Poetry]
 :pre-commit: https://pre-commit.com/[pre-commit]
 :Pylint: http://pylint.pycqa.org/en/latest/[Pylint]
 :pytest: https://docs.pytest.org/en/stable/[pytest]
@@ -43,43 +44,25 @@ git clone https://github.com/jwillikers/chunkify.git
 cd chunkify
 ----
 
-. Install the necessary development dependencies.
-+
-DNF::
+. Install {Poetry}.
 +
 [source,sh]
 ----
-sudo dnf -y install black pre-commit pylint python3-mypy python3-pytest python3-setuptools_scm+toml
+sudo dnf -y install poetry
 ----
 
-Virtual Environment::
-+
-.. Create a virtual environment for the project.
+. Install the dependencies with Poetry.
 +
 [source,sh]
 ----
-python -m venv venv
-----
-
-.. Activate the virtual environment.
-+
-[source,sh]
-----
-source venv/bin/activate.fish
-----
-
-.. Install the necessary dependencies.
-+
-[source,sh]
-----
-python -m pip install -r requirements-dev.txt
+poetry install
 ----
 
 . Install the pre-commit hooks for the project.
 +
 [source,sh]
 ----
-pre-commit install
+poetry run pre-commit install
 ----
 
 === Format
@@ -88,7 +71,7 @@ Use Black to format the Python code.
 
 [source,sh]
 ----
-black .
+poetry run black .
 ----
 
 === Lint
@@ -97,7 +80,7 @@ Check the project for common programming errors with {Pylint}.
 
 [source,sh]
 ----
-pylint -j 0 *.py
+poetry run pylint -j 0 *.py
 ----
 
 === Check Static Typing
@@ -106,7 +89,7 @@ Check static typing with {mypy}.
 
 [source,sh]
 ----
-mypy *.py
+poetry run mypy *.py
 ----
 
 === Test
@@ -117,16 +100,16 @@ From the root directory of the project, run `pytest`.
 
 [source,sh]
 ----
-pytest
+poetry run pytest
 ----
 
 === Package
 
-Build with Python's *build* module.
+Build with Poetry.
 
 [source,sh]
 ----
-python -m build
+poetry build
 ----
 
 == Contributing
@@ -143,6 +126,7 @@ Several of these projects are enumerated below.
 * {Black}
 * {Git}
 * {mypy}
+* {Poetry}
 * {pre-commit}
 * {Pylint}
 * {pytest}

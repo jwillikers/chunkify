@@ -16,13 +16,15 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.9
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v2.0.0
       - name: Install Python dependencies
-        run: python -m pip install -r requirements-dev.txt
+        run: poetry install
       - name: Check formatting with Black
-        run: black --check .
+        run: poetry run black --check .
       - name: Lint with Pylint
-        run: pylint -j 0 chunkify
+        run: poetry run pylint -j 0 chunkify
       - name: Check static typing with mypy
-        run: mypy chunkify
+        run: poetry run mypy chunkify
       - name: Test with pytest
-        run: pytest
+        run: poetry run pytest

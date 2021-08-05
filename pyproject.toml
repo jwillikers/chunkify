@@ -1,5 +1,26 @@
-[build-system]
-requires = ["setuptools>=40.8.0", "wheel", "setuptools_scm[toml]>=6.0"]
-build-backend = "setuptools.build_meta"
+[tool.poetry]
+name = "chunkify"
+version = "0.1.0"
+description = "An implementation of the grouping function documented in the itertools Python module."
+authors = ["Jordan Williams <jordan@jwillikers.com>"]
+maintainers = ["Jordan Williams <jordan@jwillikers.com>"]
+license = "GPL-3.0-only"
+readme = "README.adoc"
+homepage = "https://github.com/jwillikers/chunkify"
+repository = "https://github.com/jwillikers/chunkify"
+documentation = "https://github.com/jwillikers/chunkify"
+exclude = ["chunkify/test_chunkify.py"]
 
-[tool.setuptools_scm]
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+black = "^21.7b0"
+mypy = "^0.910"
+pylint = "^2.9.6"
+pytest = "^6.2.4"
+pre-commit = "^2.13.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
