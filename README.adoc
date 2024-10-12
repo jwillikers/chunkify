@@ -20,7 +20,8 @@ endif::[]
 :pytest: https://docs.pytest.org/en/stable/[pytest]
 :Python: https://www.python.org/[Python]
 
-image:https://img.shields.io/github/workflow/status/jwillikers/chunkify/CI[GitHub Workflow Status]
+// todo Migrate CI to Codeberg.
+// image:https://img.shields.io/github/workflow/status/jwillikers/chunkify/CI[GitHub Workflow Status]
 
 An implementation of the grouping function documented in the {itertools} {Python} module.
 The function is dubbed _chunkify_ here.
@@ -32,35 +33,35 @@ These steps assume you are on {Fedora} and familiar with the Linux command-line 
 
 . Clone the project's repository from GitHub.
 +
-[source,sh]
+[,sh]
 ----
-git clone https://github.com/jwillikers/chunkify.git
+git clone https://codeberg.org/jwillikers/chunkify.git
 ----
 
 . Change into the project's directory.
 +
-[source,sh]
+[,sh]
 ----
 cd chunkify
 ----
 
 . Install {Poetry}.
 +
-[source,sh]
+[,sh]
 ----
 sudo dnf -y install poetry
 ----
 
 . Install the dependencies with Poetry.
 +
-[source,sh]
+[,sh]
 ----
 poetry install
 ----
 
 . Install the pre-commit hooks for the project.
 +
-[source,sh]
+[,sh]
 ----
 poetry run pre-commit install
 ----
@@ -69,7 +70,7 @@ poetry run pre-commit install
 
 Use Black to format the Python code.
 
-[source,sh]
+[,sh]
 ----
 poetry run black .
 ----
@@ -78,7 +79,7 @@ poetry run black .
 
 Check the project for common programming errors with {Pylint}.
 
-[source,sh]
+[,sh]
 ----
 poetry run pylint -j 0 *.py
 ----
@@ -87,7 +88,7 @@ poetry run pylint -j 0 *.py
 
 Check static typing with {mypy}.
 
-[source,sh]
+[,sh]
 ----
 poetry run mypy *.py
 ----
@@ -98,7 +99,7 @@ Test cases are available for _chunkify_.
 Execute them with {pytest}.
 From the root directory of the project, run `pytest`.
 
-[source,sh]
+[,sh]
 ----
 poetry run pytest
 ----
@@ -107,7 +108,7 @@ poetry run pytest
 
 Build with Poetry.
 
-[source,sh]
+[,sh]
 ----
 poetry build
 ----
@@ -142,7 +143,7 @@ Refer to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct] for details.
 
 This repository is licensed under the https://www.gnu.org/licenses/gpl-3.0.html[GPLv3], a copy of which is available link:LICENSE.adoc[here].
 
-© 2020-2021 Jordan Williams
+© 2020-2024 Jordan Williams
 
 == Authors
 
